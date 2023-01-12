@@ -1,0 +1,65 @@
+/* Show title of unread tabs with red and italic font */
+/*
+:root.sidebar tab-item.unread .label-content {
+  color: red !important;
+  font-style: italic !important;
+}
+*/
+
+/* Add private browsing indicator per tab */
+/*
+:root.sidebar tab-item.private-browsing tab-label:before {
+  content: "🕶";
+}
+*/
+
+root.right tab-item tab-twisty {
+  order: -1;
+}
+:root.right tab-item tab-closebox {
+  order: 10000;
+}
+
+#tabbar tab-item tab-item-substance:not(:hover) tab-closebox {
+  display: none;
+}
+
+tab-item:not(.pinned) tab-item-substance {
+  padding-left: 8px !important;
+}
+
+
+tab-item.active .background {
+  background-color: rgba(186,186,186,0.59);
+}
+tab-item.active .labrgba(186,186,186,0.84)
+  font-weight: bold;
+  font-size: 14px;
+}
+
+tab-item.active tab-counter {
+  color: #fff;
+}
+
+tab-item tab-twisty {
+  margin-right: -1em;
+  opacity: 0 !important;
+  position: relative;
+  z-index: 10000;
+}
+
+/* show separator space between root level tabs */
+tab-item[data-level="0"] {
+  margin-top: calc(var(--tab-size) / 3); /* please change this as you like */
+}
+/* cancel needless separators on exceptions */
+tab-item[data-level="0"].pinned,
+tab-item[data-level="0"].pinned + tab-item[data-level="0"],
+tab-item[data-level="0"] + tab-item[data-level="0"]:not([data-child-ids]) {
+  
+  margin-top: 0;
+}
+
+root .tab .highlighter::before {
+  display: none; 
+}
