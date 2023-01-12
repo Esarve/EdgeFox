@@ -1,6 +1,8 @@
 # EdgeFox
 Make your firefox browser look like microsoft edge
 
+![](https://i.imgur.com/dF9KYMR.png)
+
 ## How to?
 * On Firefox 69 and later, go to (type on your adress bar and hit enter) `about:config`
 * find `toolkit.legacyUserProfileCustomizations.stylesheets` to `true`
